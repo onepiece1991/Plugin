@@ -1,0 +1,366 @@
+@charset "utf-8";
+/**
+ * @Author: JXX
+ * @Time: 2018/10/24
+ * @Description: reset and common for PC(px)
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+button, input, textarea,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary {
+    display: block;
+}
+html, 
+body {
+    height: 100%;
+}
+html {
+    font-size: 100%;
+    -ms-text-size-adjust: 100%;
+    /*防止iPhone在坚屏转向横屏时放大文字*/
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    font: 14px/1.5 "PingFang SC","Microsoft YaHei",SimSun,Arial,"Helvetica Neue", Helvetica,sans-serif;
+    color: #666;
+    /*字体抗锯齿*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fff;
+}
+button,
+input,
+textarea,
+select,
+optgroup,
+option {
+    font: 100%/1 "PingFang SC","Microsoft YaHei",SimSun,Arial,"Helvetica Neue", Helvetica,sans-serif;
+    outline: 0;
+}
+textarea {
+    /*去除右下角的三角形*/
+    resize: none;
+}
+ol, ul, li {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, 
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+caption,
+th { 
+    text-align: left;
+}
+caption,
+code,
+th,
+optgroup {
+    font-weight:normal;
+    font-style: normal;
+}
+i, 
+cite, 
+em, 
+var, 
+address, 
+dfn {
+    font-style: italic;
+}
+b,
+strong {
+    font-weight: bold
+}
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+code,
+kbd,
+pre,
+samp {
+    font-family: "PingFang SC","Microsoft YaHei",SimSun,Arial,"Helvetica Neue", Helvetica,sans-serif;
+    _font-family: "PingFang SC","Microsoft YaHei",SimSun,Arial,"Helvetica Neue", Helvetica,sans-serif;
+    font-size: 1em
+}
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word
+}
+small {
+    font-size: 80%;
+}
+sup, 
+sub { 
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em
+}
+
+sub {
+    bottom: -0.25em
+}
+abbr[title], 
+acronym[title] {
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+mark {
+    background: #00A4EA;
+    color: #FFF;
+}
+
+button {
+    cursor: pointer;
+}
+a {
+    color: #666;
+    outline: none;
+    text-decoration: none;
+}
+a:active,
+a:hover,
+a:focus {
+    outline: 0;
+    text-decoration: none;
+}
+a:active{star:expression(this.onFocus=this.blur());}
+fieldset,
+img,
+a img,
+:link img,
+:visited img {
+    border: 0;
+}
+/*Hide audio tags without the controls attribute.*/
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+/*Hide the tags with the hidden attribute.*/
+[hidden] {
+    display: none
+}
+/*IE 9*/
+svg:not(:root) {
+  overflow: hidden;
+  _zoom: 1
+}
+
+/*position*/
+.pr {
+    position: relative;
+}
+.pa {
+    position: absolute;
+}
+
+/*display*/
+.dis-inblock {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+.hide,
+.dis-none {
+    display: none
+}
+
+/*float*/
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+
+/*clear float*/
+.clearfix:after {
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    content: '.';
+}
+.clearfix {
+    *zoom: 1;
+}
+
+/*common container width=1000px*/
+.public-container {
+    width: 1000px;
+    margin: 0 auto
+}
+
+/*font weight*/
+.font-b {
+    font-weight: bold;
+}
+.font-i {
+    font-style: italic;
+}
+
+/*no border*/ 
+.noBorder {
+    border: 0;
+}
+
+/*font size*/
+.f-12 {
+    font-size: 12px;
+}
+.f-14 {
+    font-size: 14px;
+}
+.f-16 {
+    font-size: 16px;
+}
+.f-18 {
+    font-size: 18px;
+}
+.f-20 {
+    font-size: 20px;
+}
+.f-22 {
+    font-size: 22px;
+}
+.f-24 {
+    font-size: 24px;
+}
+
+/*margin*/
+.mar-t0 {
+    margin-top: 0;
+}
+.mar-r0 {
+    margin-right: 0;
+}
+.mar-b0 {
+    margin-bottom: 0;
+}
+.mar-l0 {
+    margin-left: 0;
+}
+.mar-t10 {
+    margin-top: 10px;
+}
+.mar-r10 {
+    margin-right: 10px;
+}
+.mar-b10 {
+    margin-bottom: 10px;
+}
+.mar-l10 {
+    margin-left: 10px;
+}
+.mar-t20 {
+    margin-top: 20px;
+}
+.mar-r20 {
+    margin-right: 20px;
+}
+.mar-b20 {
+    margin-bottom: 20px;
+}
+.mar-l20 {
+    margin-left: 20px;
+}
+.mar-t30 {
+    margin-top: 30px;
+}
+.mar-r30 {
+    margin-right: 30px;
+}
+.mar-b30 {
+    margin-bottom: 30px;
+}
+.mar-l30 {
+    margin-left: 30px;
+}
+
+/*padding*/
+.pad-t0 {
+    padding-top: 0;
+}
+.pad-r0 {
+    padding-right: 0;
+}
+.pad-b0 {
+    padding-bottom: 0;
+}
+.pad-l0 {
+    padding-left: 0;
+}
+.pad-t10 {
+    padding-top: 10px;
+}
+.pad-r10 {
+    padding-right: 10px;
+}
+.pad-b10 {
+    padding-bottom: 10px;
+}
+.pad-l10 {
+    padding-left: 10px;
+}
+.pad-t20 {
+    padding-top: 20px;
+}
+.pad-r20 {
+    padding-right: 20px;
+}
+.pad-b20 {
+    padding-bottom: 20px;
+}
+.pad-l20 {
+    padding-left: 20px;
+}
+.pad-t30 {
+    padding-top: 30px;
+}
+.pad-r30 {
+    padding-right: 30px;
+}
+.pad-b30 {
+    padding-bottom: 30px;
+}
+.pad-l30 {
+    padding-left: 30px;
+}
