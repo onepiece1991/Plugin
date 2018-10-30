@@ -13,3 +13,11 @@ author: JXX
 ### fitRem
 update time: 2018-10-29  
 px单位换算成rem的js   
+
+### tips 
+update time: 2018-10-30  
+弹出提示弹框  
+
+### placeholder  
+update time: 2018-10-30   
+placeholder属性适配低版浏览器
