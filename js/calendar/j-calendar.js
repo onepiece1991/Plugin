@@ -118,6 +118,12 @@ function createSelectYear() {
             selectyear.setAttribute('data-value',year)
             yearMenu.style.display = 'none';
             createTabledate(year,month);
+            //切换时是否会遇到假期安排的时间selectedDate
+            if(isSelectedDate(selectedDate)) {
+                withClass('calendar-wrapper').classList.add('calendar-holidaystyle');
+            } else {
+                removeClassName('calendar-holidaystyle');
+            }
         }
         yearBox.appendChild(li);
     }
@@ -171,6 +177,12 @@ function createMonthSelect() {
             selectmonth.setAttribute('data-value',month)
             monthMenu.style.display = 'none';
             createTabledate(year,month);
+            //切换时是否会遇到假期安排的时间selectedDate
+            if(isSelectedDate(selectedDate)) {
+                withClass('calendar-wrapper').classList.add('calendar-holidaystyle');
+            } else {
+                removeClassName('calendar-holidaystyle');
+            }
         }
         monthBox.appendChild(li);
     }
@@ -319,7 +331,7 @@ function createTabledate(year, month) {
         pervLastDay = 6;
     }
     //得到上个月最后一天;
-    var pervMonthlastDay = getPervMonthLastDay(2018,11);
+    var pervMonthlastDay = getPervMonthLastDay(year,month);
     //上月最后几天循环
     var lastdays = pervMonthlastDay-pervLastDay+1;
     var tr = newElement('tr');
@@ -447,6 +459,12 @@ function leftrightclick() {
         monthSelect.innerHTML = monthVal + '月';
         //重新画表
         createTabledate(yearVal, monthVal);
+        //切换时是否会遇到假期安排的时间selectedDate
+        if(isSelectedDate(selectedDate)) {
+            withClass('calendar-wrapper').classList.add('calendar-holidaystyle');
+        } else {
+            removeClassName('calendar-holidaystyle');
+        }
     }
     //下一个月
     rightBtn.onclick = function() {
@@ -466,6 +484,12 @@ function leftrightclick() {
         monthSelect.innerHTML = monthVal + '月';
         //重新画表
         createTabledate(yearVal, monthVal);
+        //切换时是否会遇到假期安排的时间selectedDate
+        if(isSelectedDate(selectedDate)) {
+            withClass('calendar-wrapper').classList.add('calendar-holidaystyle');
+        } else {
+            removeClassName('calendar-holidaystyle');
+        }
     }
     //返回今天
     var toToday = withClass('calendar-backtotoday');
@@ -480,6 +504,12 @@ function leftrightclick() {
         createTabledate(currYear, currMonth);
         setRight(currYear, currMonth, currDate);
         hideDropdown('dropdown-menu');
+        //切换时是否会遇到假期安排的时间selectedDate
+        if(isSelectedDate(selectedDate)) {
+            withClass('calendar-wrapper').classList.add('calendar-holidaystyle');
+        } else {
+            removeClassName('calendar-holidaystyle');
+        }
     }
 }
 
@@ -647,10 +677,10 @@ function setOther(year,month,day,data){
 
 //更新日历下拉选项中的年和月
 function updateSelect(year,month){
-    var selectmonth=withID("selectedMonth");
-    var selectyear=withID("selectedYear");
-    selectmonth.innerHTML=month;
-    selectyear.innerHTML=year;
+    var selectmonth = withID("selectedMonth");
+    var selectyear = withID("selectedYear");
+    selectmonth.innerHTML = month + '月';
+    selectyear.innerHTML = year + '年';
 }
 
 //阻止冒泡
@@ -731,4 +761,13 @@ function dateToA(val) {
             return allTagA[i];
         }
 　　 };
+}
+
+//是否是假期安排的时间
+function isSelectedDate(str) {
+    if(hVal.indexOf(str) > -1) {
+        return true;
+    } else {
+        return false;
+    }
 }
