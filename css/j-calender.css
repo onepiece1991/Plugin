@@ -238,6 +238,9 @@
     overflow: hidden;
 }
 /*班*/
+.calendar-table-work {
+    background: #F5F5F5;
+}
 .calendar-table-work .calendar-table-holiday-sign {
     background: #969799;
 }

@@ -36,6 +36,7 @@ setRight(currYear, currMonth, currDate);
 //上月下月的a标签给事件
 leftrightclick();
 
+
 //加载外框
 function showContainer() {
     var str = '<div class="calendar-container">'
@@ -414,6 +415,8 @@ function createTabledate(year, month) {
     setHolidayred();//设置星期六星期天的样式   
     holidaySelect();  //更新假期安排
     setA(); //设置td中a的事件
+    //左上角休息和上班的标记
+    daySign();
     
     //获取当前被选中的a，如果没有被选中的则查找今天
     var sarr = [];
@@ -770,4 +773,44 @@ function isSelectedDate(str) {
     } else {
         return false;
     }
+}
+
+//上班---标记
+function daySign(){
+    var signdays;
+    var weekdays = [];
+    var weekends = [];
+    if(window.XMLHttpRequest) {
+        signdays = new XMLHttpRequest();
+    } else if (window.ActiveXObject) {
+        signdays = new window.ActiveXObject();
+    } else {
+        alert("请升级您的浏览器");  
+    }
+    
+    if(signdays != null) {
+        signdays.open("GET","./week.json",true);  
+        signdays.send(null);
+        signdays.onreadystatechange = function() {
+            if(signdays.readyState == 4 && signdays.status == 200) {
+                var signObj = JSON.parse(signdays.responseText); 
+                weekdays = signObj.weekdays;
+                weekends = signObj.weekends;
+                //工作日
+                var allTagA = document.getElementsByTagName('a');
+                for (var i = 0; i < allTagA.length; i++) {
+                    var attrs = allTagA[i].getAttribute('date');
+                    if(weekdays.indexOf(attrs) > -1) {
+                        allTagA[i].classList.add('calendar-table-work');
+                        allTagA[i].innerHTML += '<span class="calendar-table-holiday-sign">班</span>';
+                    }
+                    if(weekends.indexOf(attrs) > -1) {
+                        allTagA[i].classList.add('calendar-table-rest');
+                        allTagA[i].innerHTML += '<span class="calendar-table-holiday-sign">休</span>';
+                    }
+                　　        };
+            }
+        }
+    }
+    
 }
