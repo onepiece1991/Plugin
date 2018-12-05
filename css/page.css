@@ -1,0 +1,71 @@
+@charset "utf-8";
+/*==========================
+    @author: Jxx
+    @date: 2018-12-3
+    @description: page style
+==========================*/
+/*分页*/
+a {
+    cursor: pointer;
+}
+.col9 {
+    color: #999 !important;
+}
+/*手型*/
+.cursor-point{
+    cursor: pointer;
+}
+/*不可点击状态*/
+.cursor-normal{
+    cursor: default;
+}
+
+.page-group .page-classify a{
+    font-size: inherit;
+    line-height: 32px;
+    color: #00A4EA;         /*上一页和下一页*/
+}
+.page-total{
+    margin: 0 20px;
+    font-size: inherit;
+    line-height: 32px;
+    color: #666666;         /*第几页*/
+}
+.page-total .page-state{
+    display:inline-block;
+    width: 47px;
+    height: 32px;
+    margin: 0 5px;
+    font-size: 14px;
+    line-height: 32px;
+    color: #333333;
+    padding-left: 5px;
+    border: 1px solid #D9D9D9;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.page-total .page-span{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 32px;
+    color: #666666;
+    vertical-align: top;
+}
+.page-group .page-go{
+    margin-left: 20px;
+}
+.page-group .page-go .page-go-a{
+    display:block;
+    width: 45px;
+    height: 30px;
+    font-size: inherit;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: #00A4EA;
+    border: 1px solid #FFFFFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
