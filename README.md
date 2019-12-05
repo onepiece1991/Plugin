@@ -21,3 +21,15 @@ update time: 2018-10-30
 ### placeholder  
 update time: 2018-10-30   
 placeholder属性适配低版浏览器
+
+### calendar
+update time: 2018-12-26
+模拟百度日历
+
+### calendar-laydate
+update time: 2019-1-4
+使用 layDate 独立版
+
+### newsticker
+update time: 2019-10-12
+jQuery.newsticker 兼容IE8的jQuery滚动公告/新闻行情/信息地雷Banner插件
