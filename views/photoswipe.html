@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>photoswipe的使用</title>
+    <link rel="stylesheet prefetch" href="../css/photoswipe/photoswipe.css">
+    <link rel="stylesheet prefetch" href="../css/photoswipe/default-skin/default-skin.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .clearfix::before,
+      .clearfix::after {
+        display: block;
+        content: '';
+        visibility: hidden;
+        height: 100%;
+        clear: both;
+      }
+
+      body {
+        padding-top: 2%;
+      }
+
+      .my-gallery {
+        width: 96%;
+        margin: 0 auto;
+      }
+
+      .my-gallery .img-dv {
+        width: 100%;
+        margin-bottom: 1%;
+      }
+
+      .my-gallery .img-dv a {
+        display: block;
+        width: 100%;
+        text-align: center
+      }
+
+      .my-gallery .img-dv a img {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--如果有多个data-pswp-uid 它的值是不能重复的-->
+    <div class="my-gallery" data-pswp-uid="1">
+    </div>
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"></div>
+  </body>
+  <script src="../js/photoswipe/photoswipe.js"></script>
+  <script src="../js/photoswipe/photoswipe-ui-default.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/photoswipe/init-photoswipe.js"></script>
+</html>
