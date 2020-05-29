@@ -955,7 +955,6 @@ var calendar = {
     //这个月开始的循环
     //这个月startDays的取值 7-6-5-4-3-2-1
     var startDays = ((7 - firstDay) == 7 ? 7 : (7 - firstDay));
-    // var startDays = ((8 - firstDay) == 8 ? 1 : (8 - firstDay));
     for (var i = 1; i <= startDays; i++) {
       var td = calendar.newElement("td");
       var tdDiv = calendar.newElement('div');
