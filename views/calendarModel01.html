@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="description" content="日历插件，星期日到星期六，可兼容到IE8">
+		<title>日历</title>
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/calenderPlugin.css" />
+	</head>
+	<body>
+    <input type="text" placeholder="xxxx-xx-xx" id="input">
+    <button class="btn-confirm" onclick="saveChange()">保存修改</button>
+    <!-- 弹框 -->
+    <div class="popup-box">
+      <i class="popup-close" onclick="hideWidge()"></i>
+      <div class="popup-main">
+        <p class="popup-info" id="popupInfo">111</p>
+      </div>
+      <button class="popup-btn" onclick="makeSure()">确定</button>
+    </div>
+    <!-- 遮罩 -->
+    <div class="mask"></div>
+    <script src="../js/calendar/calendarPlugin01.js"></script>
+    <script src="../js/calendar/calendarModel01.js"></script>
+	</body>
+</html>
