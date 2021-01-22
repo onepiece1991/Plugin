@@ -6,6 +6,7 @@
 
 var defaultTimeH = 17,
     defaultTimeM = 0;
+getNewTime()
 setInterval(function(){
   getNewTime()
 },10000)
