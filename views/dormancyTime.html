@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta charset="utf-8">
+		<title>休眠时长</title>
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/dormancyTime.css" />
+	</head>
+	<body>
+    <p>休眠指令启动时间</p>
+    <input class="dt-input" placeholder="年" id="year" value="2021">年
+    <input class="dt-input" placeholder="月" id="month" value="1">月
+    <input class="dt-input" placeholder="日" id="day" value="13">日
+    <input class="dt-input" placeholder="时" id="hour" value="23">时
+    <input class="dt-input" placeholder="分" id="minute" value="34">分
+    <button class="t-btn" onclick="getNewTime()">更新</button>
+    <p class="min-p" id="minP"></p>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/dormancyTime/dormancyTime.js"></script>
+	</body>
+</html>

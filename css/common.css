@@ -38,7 +38,8 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 body {
-    font: 14px/1.5 "PingFang SC","Microsoft YaHei",SimSun,Arial,"Helvetica Neue", Helvetica,sans-serif;
+    /* font: 14px/1.5 "PingFang SC","Microsoft YaHei",SimSun,Arial,"Helvetica Neue", Helvetica,sans-serif; */
+    font: 14px/1.5 Arial,sans-serif;
     color: #666;
     /*字体抗锯齿*/
     -webkit-font-smoothing: antialiased;

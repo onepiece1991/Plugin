@@ -145,8 +145,8 @@ function createSelectYear() {
 
 //创建月份下拉，并给对应事件
 function createMonthSelect() {
-    var strM = '<a href="javscript:void(0)" class="calender-month-prev"></a>'
-                +'<a href="javscript:void(0)" class="calender-month-next"></a>'
+    var strM = '<a href="javscript:void(0)" class="calender-month-prev"><</a>'
+                +'<a href="javscript:void(0)" class="calender-month-next">></a>'
                 +'<div class="calendar-select-ceil">'
                     +'<div class="dropdown-btn-group" id="monthBtnGroup">'
                         +'<div class="dropdown-btn" id="selectedMonth" data-value="' + currMonth + '">'+ currMonth +'月</div>'
@@ -343,8 +343,7 @@ function createTabledate(year, month) {
         td.appendChild(tdDiv);
         var a=getA(parseInt(month)-1==0?parseInt(year)-1:year,parseInt(month)-1==0?12:parseInt(month)-1,i);
         //上个月最后几天的样式
-        // a.className = 'calendar-table-other-month';
-        a.classList.add('calendar-table-other-month');
+        a.className = 'calendar-table-other-month';
         tdDiv.appendChild(a);
         tr.appendChild(td);
     }
@@ -368,20 +367,19 @@ function createTabledate(year, month) {
     //当月还剩余的天数
     var restDays = currMonthLashDay - startDays;
     //循环次数
-    console.log(restDays)
-    var loopT = 5;
-    // if(check(restDays/7)){
-    //     //是小数
-    //     loopT = Math.ceil(restDays/7);//向上取整
-    // }else{
-    //     loopT = restDays/7;    
-    // }
+    var loopT = 0;
+    if(check(restDays/7)){
+        //是小数
+        loopT = Math.ceil(restDays/7);//向上取整
+    }else{
+        loopT = restDays/7;    
+    }
     //如果一个月占六行
-    // if ((loopT + 1) == 6) {
-    //     calendarTable.setAttribute('class','calendar-table-box calendar-table-box-six');
-    // } else {
-    //     calendarTable.setAttribute('class','calendar-table-box');
-    // }
+    if ((loopT + 1) == 6) {
+        calendarTable.setAttribute('class','calendar-table-box calendar-table-box-six');
+    } else {
+        calendarTable.setAttribute('class','calendar-table-box');
+    }
     
     //这是下个月开始的变量;
     var lastFirstDay = 1;
@@ -396,8 +394,7 @@ function createTabledate(year, month) {
                 //下个月
                 var c=getA(parseInt(month)+1==parseInt(13)?parseInt(year)+1:year,parseInt(month)+1==parseInt(13)?1:parseInt(month)+1,lastFirstDay);
                 //下个月最后几天的样式
-                // c.className = 'calendar-table-other-month';
-                c.classList.add('calendar-table-other-month');
+                c.className = 'calendar-table-other-month';
                 tdDiv.appendChild(c);
                 lastFirstDay++;
                 tr1.appendChild(td);
@@ -716,9 +713,9 @@ function setHolidayred() {
                 cellA.setAttribute('class','calendar-table-today');
             }
             if(j>=rows[i].cells.length-2) {
-                // if(cellA.getAttribute("class") != "calendar-table-other-month"){
-                // }
+                if(cellA.getAttribute("class") != "calendar-table-other-month"){
                     cellA.classList.add('calendar-table-weekend');
+                }
             }
         }
     }

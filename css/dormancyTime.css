@@ -1,0 +1,41 @@
+@charset "utf-8";
+/**
+ * @Author: JXX
+ * @Time: 2021/1/15
+ * @Description: dormancy time style
+ */
+body {
+  padding: 10px;
+}
+.dt-input {
+  width: 100px;
+  height: 40px;
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 28px;
+  color: #333;
+  border: 1px solid #ddd;
+}
+.t-btn {
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 28px;
+  border-radius: 8px;
+  background-color: #00A4EA;
+}
+.min-p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: #333;
+  line-height: 22px;
+}
+.min-p span {
+  display: inline-block;
+  font-size: 20px;
+  color: #f00;
+  font-weight: bold;
+}
