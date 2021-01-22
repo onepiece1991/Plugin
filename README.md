@@ -25,6 +25,8 @@ placeholder属性适配低版浏览器
 ### calendar
 update time: 2018-12-26
 模拟百度日历
+update time: 2021-1-22
+更新样式
 
 ### calendar-laydate
 update time: 2019-1-4
@@ -33,3 +35,19 @@ update time: 2019-1-4
 ### newsticker
 update time: 2019-10-12
 jQuery.newsticker 兼容IE8的jQuery滚动公告/新闻行情/信息地雷Banner插件
+
+### dormancyTime
+update time: 2021-1-22
+休眠时间计算
+
+### countdown
+update time: 2021-1-22
+下班时间倒计时
+
+### calendarModel01
+update time: 2021-1-22
+日历插件，星期日到星期六，可兼容到IE8
+
+### calendarModel02
+update time: 2021-1-22
+日历插件，星期一到星期日，可兼容到IE8

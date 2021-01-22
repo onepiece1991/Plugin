@@ -8,7 +8,7 @@ var defaultTimeH = 17,
     defaultTimeM = 0;
 setInterval(function(){
   getNewTime()
-},1000)
+},10000)
 
 // 初始化
 function initTime(h, m) {
@@ -22,7 +22,7 @@ function initTime(h, m) {
     $('#minP').removeClass('error');
     var timeS;
     if(m - myMinute < 0) {
-      timeS = (h - myHour)*60 + (m + 60 - myMinute);
+      timeS = (h - myHour - 1)*60 + (m + 60 - myMinute);
     } else {
       timeS = (h - myHour)*60 + (m - myMinute);
     }
