@@ -1,0 +1,104 @@
+@charset "utf-8";
+/**
+ * @Author: Jinxx
+ * @Time: 2021/06/28
+ * @Description: table data style
+ */
+.main-wrapper {
+  padding: 14px 0 45px;
+  margin-bottom: 36px;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 2px;
+}
+/* 蓝色竖线标题 */
+.main-title {
+  position: relative;
+  padding-left: 40px;
+  font-size: 18px;
+  line-height: 25px;
+  color: #4a4a4f;
+  font-weight: bold;
+}
+.main-title:before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  margin-top: -9px;
+  width: 4px;
+  height: 18px;
+  background-color: #3f86ed;
+  border-radius: 2px;
+}
+/* 表格 */
+.table-box {
+  padding: 23px 30px 0;
+}
+.public-table {
+  width: 100%;
+  border-radius: 2px;
+}
+.public-table tbdoy tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+.public-table th,
+.public-table td {
+  border: 1px solid #cfd8de;
+  text-align: center;
+}
+.public-table th {
+  padding: 14px 5px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #202121;
+  font-weight: normal;
+  background-color: #edfbf6;
+}
+.public-table td {
+  padding: 7px 5px;
+  font-size: 14px;
+  line-height: 36px;
+  color: #202121;
+  text-align: center;
+}
+/* 表格里的输入框 */
+.table-input {
+  padding: 0 28px 0 10px;
+  width: 108px;
+  height: 36px;
+  font-size: 14px;
+  color: #202121;
+  line-height: 34px;
+  text-align: left;
+  background-color: #fcfdff;
+  border-radius: 4px;
+  border: 1px solid #cfd8de;
+}
+.input-box {
+  position: relative;
+  display: inline-block;
+}
+.i-edit,
+.i-delete,
+.i-confirm {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 6px;
+  background: url(../images/table/edit.png) no-repeat center center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.i-delete {
+  background-image: url(../images/table/delete.png);
+}
+.i-confirm {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -8px;
+  background-image: url(../images/table/confirm.png);
+}

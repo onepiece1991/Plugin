@@ -23,9 +23,9 @@ function initTime(h, m) {
     $('#minP').removeClass('error');
     var timeS;
     if(m - myMinute < 0) {
-      timeS = (h - myHour - 1)*60 + (m + 60 - myMinute);
+      timeS = (parseInt(h) - myHour - 1)*60 + (parseInt(m) + 60 - myMinute);
     } else {
-      timeS = (h - myHour)*60 + (m - myMinute);
+      timeS = (parseInt(h) - myHour)*60 + (parseInt(m) - myMinute);
     }
     $('#min').text(timeS);
   }

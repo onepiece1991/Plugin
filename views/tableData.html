@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>循环表格数据-数据处理</title>
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/tableData.css" />
+</head>
+
+<body>
+  <div class="main-wrapper" id="floorMaintain">
+    <h3 class="main-title">详情</h3>
+    <div class="table-box">
+      <table class="public-table">
+        <thead>
+          <!-- <tr v-if="roomListResult&&roomListResult[0]&&roomListResult[0].roomList"> -->
+          <tr>
+            <th>楼层</th>
+            <th>别称</th>
+            <th>本层房间数</th>
+            <!-- <th v-for="(m, n) in roomListResult[0].roomList" :key="n">房间号</th> -->
+            <th v-for="(m, n) in new Array(linesNo)" :key="n">房间号</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(cell, i) in roomListResult" :key="i">
+            <td>{{cell.floor}}</td>
+            <td>{{cell.name}}</td>
+            <td>{{cell.propertyNo}}</td>
+            <td v-if="cell&&cell.roomList" v-for="(m, n) in cell.roomList" @mouseenter="mouseenterFn(i, n, 'room')"
+              @mouseleave="mouseleaveFn">
+              <div class="input-box" v-if="inputFlag(i, n, 'room')">
+                <input class="table-input" v-model="inputEditVal">
+                <i class="i-confirm" @click="confirmFn(i, n, 'room')"></i>
+              </div>
+              <div v-else>
+                <span>{{m.room}}</span>
+                <i class="i-edit" v-if="editFlag(i, n, 'room') && m.room != ''" @click="editFn(m.room)"></i>
+                <i class="i-delete" v-if="editFlag(i, n, 'room') && m.room != ''" @click="deleteFn(i, n)"></i>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="../js/vue.min.js"></script>
+  <script src="../js/table/tableData.js"></script>
+</body>
+
+</html>
