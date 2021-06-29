@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <title>循环表格数据-数据处理</title>
   <link rel="stylesheet" href="../css/common.css" />
   <link rel="stylesheet" href="../css/tableData.css" />
 </head>
-
 <body>
   <div class="main-wrapper" id="floorMaintain">
     <h3 class="main-title">详情</h3>
@@ -28,8 +26,7 @@
             <td>{{cell.floor}}</td>
             <td>{{cell.name}}</td>
             <td>{{cell.propertyNo}}</td>
-            <td v-if="cell&&cell.roomList" v-for="(m, n) in cell.roomList" @mouseenter="mouseenterFn(i, n, 'room')"
-              @mouseleave="mouseleaveFn">
+            <td v-if="cell&&cell.roomList" v-for="(m, n) in cell.roomList" @mouseenter="mouseenterFn(i, n, 'room')" @mouseleave="mouseleaveFn">
               <div class="input-box" v-if="inputFlag(i, n, 'room')">
                 <input class="table-input" v-model="inputEditVal">
                 <i class="i-confirm" @click="confirmFn(i, n, 'room')"></i>
@@ -48,5 +45,4 @@
   <script src="../js/vue.min.js"></script>
   <script src="../js/table/tableData.js"></script>
 </body>
-
 </html>
