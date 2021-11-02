@@ -1,0 +1,480 @@
+@charset "utf-8";
+/**
+ * @Author: Jinxq
+ * @Time: 2021/10/27
+ * @Description: calendar style
+ */
+.jf-bar {
+  display: inline-block; 
+  vertical-align: top;
+  padding-left: 28px;
+  font-size: 13px;
+  color: #586c94;
+  background: url(../images/signCalendar/i_grade.png) no-repeat left center;
+  cursor: pointer;
+}
+.jf-divider {
+  display: inline-block; 
+  vertical-align: top;
+  margin: 25px 4px 0;
+  width: 1px;
+  height: 12px;
+  background-color: #4a4a4f;
+  opacity: .3;
+  filter: alpha(opacity=30);
+}
+.sign-btns {
+  margin-left: 10px;
+  display: inline-block;
+  padding: 0 10px 0 10px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  font-weight: normal;
+  background-color: #3c98ff;
+  border-radius: 12px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.ib-sign {
+  display: inline-block;
+  margin-right: 4px;
+  width: 16px;
+  height: 24px;
+  background: url(../images/signCalendar/jf_sign.png) no-repeat center center;
+  vertical-align: top;
+}
+.jf-sign {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* margin: -243px 0 0 -238px; */
+  padding: 20px 16px 16px;
+  width: 476px;
+  background-color: #74b6ff;
+  background: linear-gradient(to right, #98c9ff, #74b6ff);
+  box-shadow: 0 3px 20px rgba(49, 125, 209, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 10000;
+}
+.jf-head {
+  position: relative;
+  padding-left: 32px;
+  padding-bottom: 20px;
+}
+.i-sign {
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 36px;
+  background: url(../images/signCalendar/i_sign.png) no-repeat center;
+}
+.jf-title {
+  font-size: 14px;
+  color: #fff;
+  line-height: 36px;
+}
+.jf-title>em {
+  margin: 0 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.jf-msg {
+  font-size: 14px;
+  color: #fff;
+  line-height: 16px;
+  opacity: .6;
+}
+.sign-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 120px;
+  height: 36px;
+  font-size: 14px;
+  color: #3c98ff;
+  line-height: 36px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 18px;
+  background-color: #f1f7ff;
+  cursor: pointer;
+}
+.sign-btn.disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+.btn-wrapper {
+  text-align: right;
+}
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  color: #fff;
+}
+/* 弹框 */
+/* .popup-box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 50px 20px 20px;
+  width: 400px;
+  margin-top: -100px;
+  margin-left: -200px;
+  background-color: #fff;
+  border-radius: 8px;
+  z-index: 100;
+}
+.popup-close {
+  position: absolute;
+  display: block;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background: url(../../images/signCalendar/close.png) no-repeat center center;
+}
+.popup-info {
+  font-size: 16px;
+  line-height: 22px;
+  color: #333;
+}
+.popup-btn {
+  display: block;
+  margin: 30px auto 0;
+  width: 200px;
+  font-size: 14px;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  background-color: #4ca0ff;
+  border-radius: 18px;
+} */
+.mask-white {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: 9997;
+}
+/* 日历 */
+.sign-calendar {
+  padding: 16px 47px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+.calendar-wrapper {
+  position: relative;
+}
+.c-red {
+  color: #ed5454;
+}
+.align-l {
+  text-align: left !important;
+}
+/*年月*/
+.calendar-select-box {
+  font-size: 0;
+  text-align: center;
+}
+.calendar-year-box {
+  display: none;
+  position: relative;
+  /* display: inline-block; */
+  vertical-align: top;
+  width: 90px;
+  padding-left: 10px;
+  margin: 0 20px;
+}
+.year-btn-group {
+  position: relative;
+}
+/* .arrow-down {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  background: url(../../images/signCalendar/arrow_down.png) no-repeat center center;
+} */
+.year-dropmenu {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100px;
+  height: 240px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 2;
+}
+.dropdown-menu-box {
+  height: 240px;
+  overflow-y: auto;
+}
+.dropdown-item {
+  padding-left: 10px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 30px;
+  color: #333;
+}
+.dropdown-item:hover {
+  background-color: #ccc;
+}
+.calendar-month-box {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  margin: 0 auto;
+  padding: 0 22px;
+  white-space: nowrap;
+}
+.dropdown-btn {
+  font-size: 16px;
+  line-height: 22px;
+  color: #2e8cff;
+  text-align: center;
+  font-weight: bold;
+  cursor: default;
+}
+/* 向前 向后 */
+.calender-month-prev,
+.calender-month-next {
+  position: absolute;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  border: 0;
+  background-color: #fff;
+}
+.calender-month-prev {
+  background-image: url(../images/signCalendar/icon_3l.png);
+  left: 0;
+}
+.calender-month-next {
+  background-image: url(../images/signCalendar/icon_3r.png);
+  right: 0;
+}
+
+/*表格table*/
+.calendar-table-wrapper {
+  margin-top: 17px;
+}
+.calendar-table-box {
+  margin: 0 auto;
+}
+.calendar-table-box th{
+  width: 50px;
+  height: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #262626;
+}
+/*一个月占五行*/
+.calendar-table-box td {
+  width: 50px;
+  height: 47px;
+  padding: 0;
+}
+.calendar-relative {
+    position: relative;
+    width: 100%;
+    zoom: 1;
+}
+.calendar-table-box td a {
+  display: block;
+  width: 50px;
+  height: 47px;
+  /* padding: 8px 10px 12px; */
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: default;
+}
+
+/* 工作 */
+.calendar-table-work .daynumber,
+.calendar-table-work .calendar-table-almanac,
+.calendar-table-weekend.calendar-table-work .daynumber,
+.calendar-table-weekend.calendar-table-work .calendar-table-almanac{
+    color: #7C86A2;
+}
+/*休*/
+.calendar-table-rest .daynumber,
+.calendar-table-rest .calendar-table-almanac,
+.calendar-table-other-month.calendar-table-rest .daynumber,
+.calendar-table-other-month.calendar-table-rest .calendar-table-almanac {
+  color: #ED5454;
+}
+
+/*公历*/
+.calendar-table-daynumber{
+  /* text-align: right; */
+}
+.daynumber {
+  display: inline-block;
+  margin-bottom: 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  color: #262626;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+/*阴历*/
+.calendar-table-almanac {
+  height: 0;
+  font-size: 12px;
+  line-height: 12px;
+  color: #262626;
+  transform: scale(.83);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+/*周末*/
+th.calendar-table-weekend,
+.calendar-table-weekend .daynumber,
+.calendar-table-weekend .calendar-table-almanac {
+    color: #ED5454;
+}
+/*选中*//*鼠标悬浮*/
+.calendar-table-box td a:hover {
+  /* background-color: #ffede8; */
+}
+/* 选中 */
+.calendar-table-weekend.calendar-table-work.calendar-table-selected .daynumber,
+.calendar-table-selected .daynumber,
+.calendar-table-selected.calendar-table-today .daynumber {
+  color: #fff;
+  background-color: #2e8cff;
+  /* border-radius: 50%; */
+  /* background: url(../../images/signCalendar/red_circle32.png) no-repeat;
+  background-size: 30px 30px; */
+}
+/*今天*/
+.calendar-table-today .daynumber {
+  background-color: #eff6ff;
+}
+.calendar-table-today .calendar-table-almanac {
+  height: 12px;
+  color: #2e8cff;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/*非当前月*/
+.calendar-table-other-month {
+  /* background-color: #F8F7F8; */
+  /* opacity: 0.2;
+  filter: alpha(opacity=20); */
+}
+.calendar-table-other-month .daynumber {
+  color: #262626;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  cursor: pointer;
+}
+.calendar-table-other-month .calendar-table-almanac {
+  color: #C7C5C7;
+}
+.calendar-table-selected.calendar-table-other-month .daynumber {
+  color: #fff;
+}
+
+/* 月份下拉 */
+.month-dropmenu {
+  position: relative;
+}
+.month-wrapper {
+  position: absolute;
+  top: 37px;
+  left: 50%;
+  margin-left: -360px;
+  padding: 20px 25px;
+  width: 620px;
+  background-color: #fff;
+  box-shadow: 0px 2px 14px 0px rgba(33,150,243,0.1);
+  border-radius: 5px;
+  behavior: url(/css/PIE.htc);
+  box-shadow: 0 2px 14px #e8f4fe\9;
+  z-index: 2;
+}
+.current-year {
+  margin-bottom: 7px;
+  font-size: 14px;
+  color: #586C94;
+  line-height: 19px;
+}
+.month-main {
+  padding: 0 3px;
+}
+.month-box {
+  white-space: normal;
+  font-size: 0;
+}
+.month-box li {
+  display: inline-block;
+  width: 140px;
+  height: 70px;
+  font-size: 14px;
+  color: #7C86A2;
+  line-height: 70px;
+  text-align: center;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.month-box li.other-month {
+  color: #C3C2C3;
+  background-color: #FBFAFB;
+}
+.month-box li.current-month {
+  color: #fff;
+  background-color: #3C98FF;
+}
+
+/* 返回今天 */
+.calendar-backtotoday {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #4ca0ff;
+  border-radius: 6px;
+}
+/* 重置 */
+.calendar-reset {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #999;
+  border-radius: 6px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="../css/common.css" rel="stylesheet">
+  <link href="../css/signCalender.css" rel="stylesheet">
+</head>
+<body>
+  <button class="sign-btns" onclick="showWidge()"><i class="ib-sign"></i>积分签到</button>
+  <!-- 积分签到 -->
+  <div class="jf-sign" id="jfSign">
+    <div class="jf-head">
+      <i class="i-sign"></i>
+      <p class="jf-title">这是您签到的第<em id="jfSignNo">27</em>天</p>
+      <button class="sign-btn" onclick="signNow(this)">马上签到</button>
+    </div>
+    <div class="sign-calendar" id="signCalendarBox"></div>
+    <div class="btn-wrapper">
+      <button class="btn active totoday">今天</button>
+    </div>
+  </div>
+  <div class="mask-white" id="maskWhite" onclick="hideWidge()"></div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/signCalendar/signCalendarPlugin.js"></script>
+  <script src="../js/signCalendar/signCalendarModel.js"></script>
+</body>
+</html>

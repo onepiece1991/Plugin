@@ -245,7 +245,7 @@ var floorMaintain = new Vue({
           num++
         }
       }
-      if(num == 3) {
+      if(num == this.floorList.length) {
         roomLengthArr.sort(function(a,b){
           return b-a;  //降序排列，return a-b; —>升序排列
         })
