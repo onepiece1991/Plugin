@@ -46,8 +46,7 @@ function clickDrawBtn() {
   loading = true;
   // 前端生成随机数奖品
   setTimeout(() => {
-    // var randomNo = Math.floor(Math.random() * prizeList.length);
-    var randomNo = 7;
+    var randomNo = Math.floor(Math.random() * prizeList.length);
     var activePrize = prizeList[randomNo];
     // 使用 some 循环，获取到奖品即停止遍历
     prizeList.some((item, index) => {
