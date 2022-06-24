@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动画效果合集</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <!--[if !IE]> -->
+    <link rel="stylesheet" href="../css/animationGroup/style.css">
+    
+  <!-- <![endif]-->
+  <!--[if IE]>
+    <link rel="stylesheet" href="../css/animationGroup/IE/styleIE.css">
+    <script src="../js/animationGroup/IE/indexIE.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="menu">
+    <h3 class="title">动画效果分类</h3>
+    <ul class="menu-box">
+      <li class="menu-li active">下雪</li>
+      <li class="menu-li">老虎机</li>
+      <li class="menu-li">大转盘</li>
+    </ul>
+  </div>
+  <div class="content" id="content">
+    <div class="c-main">
+      <!-- 下雪 -->
+      <div class="anim-widget animW1 hide" id="animWidget01">
+        <i class="i-a jia1 ia1"></i>
+        <i class="i-a jia2 ia2"></i>
+        <i class="i-a jia3 ia3"></i>
+        <i class="i-a jia4 ia4"></i>
+        <i class="i-a jia5 ia5"></i>
+        <i class="i-a jia6 ia6"></i>
+        <i class="i-a jia7 ia7"></i>
+        <i class="i-a jia8 ia8"></i>
+        <i class="i-a jia9 ia9"></i>
+        <i class="i-a jia10 ia10"></i>
+        <i class="i-a jia2 ia12"></i>
+        <i class="i-a jia3 ia13"></i>
+        <i class="i-a jia4 ia14"></i>
+        <i class="i-a jia5 ia15"></i>
+        <i class="i-a jia6 ia16"></i>
+        <i class="i-a jia7 ia17"></i>
+        <i class="i-a jia8 ia18"></i>
+        <i class="i-a pen"></i>
+        <i class="i-a phone"></i>
+      </div>
+
+      <!-- 老虎机 -->
+      <div class="anim-widget animW2 ag-hide" id="animWidget02">
+        <div class="draw-main">
+          <div class="draw-close"></div>
+          <!-- 抽奖滚动区域 -->
+          <div class="draw-wrap">
+            <div class="game-box">
+              <div class="game-item">
+                <ul></ul>
+              </div>
+              <div class="game-item">
+                <ul></ul>
+              </div>
+              <div class="game-item">
+                <ul></ul>
+              </div>
+            </div>
+            <!-- 还未抽奖的时候传空字符串 -->
+            <div class="draw-tips" id="drawTips"></div>
+            <!-- <div class="draw-tips" id="drawTips"><p class="dt-txt">恭喜您获得2000财务积分</p></div> -->
+            <div class="draw-btn">
+              <button class="db-b" id="drawBtn" onclick="drawStart()">开始抽奖</button>
+            </div>
+          </div>
+          <!-- 手柄 -->
+          <div class="draw-handle" id="drawHandle"></div>
+          <!-- 礼花 -->
+          <div class="draw-lh01"></div>
+          <div class="draw-lh02" id="drawLH"></div>
+        </div>
+      </div>
+
+      <!-- 大转盘 -->
+      <div class="anim-widget animW3" id="animWidget03">
+        <div class="big">
+          <img src="../images/animationGroup/ag03/icon.png" alt="" class="pointer">
+          <!-- <img src="../images/animationGroup/ag03/wheel.png" alt="" class="turntable"> -->
+          <h1>抽奖次数：<span class="number"></span></h1>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <!-- <script src="../js/animationGroup/ag02.js"></script> -->
+  <script src="../js/animationGroup/ag03.js"></script>
+</body>
+</html>

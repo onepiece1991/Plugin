@@ -396,6 +396,10 @@ var calendar = {
             txtL = '端午节';
         } else if (m == 8 && d == 15) {
             txtL = '中秋节';
+        } else if (m == 12 && d == 23) {
+          txtL = '北小年'
+        } else if (m == 12 && d == 24) {
+          txtL = '南小年'
         }
         return txtL;
     },

@@ -346,7 +346,7 @@ th.calendar-table-weekend,
 }
 /*农历位置在24节气或者节日的时候的样式*/
 .calendar-table-festival .calendar-table-almanac {
-  color: #e02d2d;
+  /* color: #e02d2d; */
 }
 
 /* 节假日 */

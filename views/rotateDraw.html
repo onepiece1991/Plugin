@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动画效果合集</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <!--[if !IE]> -->
+    <!-- <link rel="stylesheet" href="../css/animationGroup/style.css"> -->
+    <link rel="stylesheet" href="../css/animationGroup/2.css">
+    
+  <!-- <![endif]-->
+  <!--[if IE]>
+    <link rel="stylesheet" href="../css/animationGroup/IE/styleIE.css">
+    <script src="../js/animationGroup/IE/indexIE.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="menu">
+    <h3 class="title">动画效果分类</h3>
+    <ul class="menu-box">
+      <li class="menu-li active">下雪</li>
+      <li class="menu-li">老虎机</li>
+      <li class="menu-li">大转盘</li>
+    </ul>
+  </div>
+  <div class="content" id="content">
+    <div class="c-main">
+      
+
+      <!-- 大转盘 -->
+      <div class="anim-widget animW3" id="animWidget03">
+        <div class="content">
+          <div class="wheel">
+            <div :class="['round', roting ? '' : 'not_roting']" :style="{ transition: `${config.round_time}ms`, transform: `rotate(${deg}deg)` }">
+              <!-- 转盘图片 -->
+              <img :src="config.wheel" alt="" class="imgA" />
+              <div class="prize">
+                <!-- 奖品，宽高均意志，重叠在一起，以转盘中心为原点旋转 360/奖品个数 的角度 -->
+                <!-- 这边使用了 v-for, react 使用 map, 原生或 jQuery 需要在 js 中遍历创建完 DOM 元素再插入 -->
+                <div v-for="(item, index) in config.prizeList" class="item_box" :key="index.toString()"
+                  :style="{color: config.text_color, transform: `rotate(${(360 / config.prizeList.length) * index}deg)`}">
+                  <div class="item">
+                    <span class="text">{{ item.text }}</span>
+                    <img class="img" :src="item.img" :alt="item.text" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 中部LOGO -->
+            <div class="icon">
+              <img :src="config.icon" alt="" class="imgA" />
+            </div>
+            <div class="arrow">
+              <img :src="config.arrow" alt="" class="imgA" />
+            </div>
+          </div>
+          <div class="btn">
+            <button type="primary" @click="clickBtn">click</button>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/vue.min.js"></script>
+  <!-- <script src="../js/animationGroup/ag02.js"></script> -->
+  <script src="../js/animationGroup/ag03.js"></script>
+</body>
+</html>

@@ -1,0 +1,591 @@
+@charset "utf-8";
+/**
+ * @Author: Jinxx
+ * @Time: 2022/05/07
+ * @Description: animation style
+ */
+body {
+  height: 100%;
+  background-color: #eee;
+}
+/* 菜单 */
+.menu {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 200px;
+  padding: 20px;
+  transform: translateY(-50%);
+}
+.title {
+  font-size: 16px;
+  line-height: 40px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  background-color: #2e7ff0;
+  border-radius: 10px 10px 0 0;
+}
+.menu-box {
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+}
+.menu-li {
+  padding: 0 10px;
+  font-size: 14px;
+  color: #333;
+  line-height: 40px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+.menu-li:hover {
+  color: #fff;
+  background-color: #4d91f0;
+}
+.menu-li:active {
+  color: #fff;
+  background-color: #2e7ff0;
+}
+.menu-li:last-child {
+  border: 0;
+}
+/* 主内容 */
+.content {
+  height: 100%;
+  padding: 20px 20px 20px 220px;
+}
+.c-main {
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+/* 下雪 */
+.anim-widget {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.anim-widget.animW1 {
+  background-color: #f00;
+}
+.i-a {
+  position: absolute;
+  top: 0;
+  background: url(../../images/animationGroup/ag01/aqy@2x.png) no-repeat;
+  background-size: 100%;
+}
+.jia1 {
+  top: 170px;
+  right: 31px;
+  width: 64px;
+  height: 64px;
+}
+.jia2 {
+  top: -200px;
+  left: 31px;
+  width: 48px;
+  height: 53px;
+  background-image: url(../../images/animationGroup/ag01/colors1@2x.png);
+}
+.jia3 {
+  top: -100px;
+  left: 775px;
+  width: 38px;
+  height: 33px;
+  background-image: url(../../images/animationGroup/ag01/colors2@2x.png);
+}
+.jia4 {
+  top: -20px;
+  left: 212px;
+  width: 53px;
+  height: 55px;
+  background-image: url(../../images/animationGroup/ag01/coupons@2x.png);
+}
+.jia5 {
+  top: -320px;
+  left: 18px;
+  width: 432px;
+  height: 340px;
+  background-image: url(../../images/animationGroup/ag01/drift1@2x.png);
+}
+.jia6 {
+  top: -370px;
+  right: 47px;
+  width: 384px;
+  height: 390px;
+  background-image: url(../../images/animationGroup/ag01/drift2@2x.png);
+}
+.jia7 {
+  top: -5px;
+  right: 104px;
+  width: 26px;
+  height: 20px;
+  background-image: url(../../images/animationGroup/ag01/fill@2x.png);
+}
+.jia8 {
+  top: -40px;
+  left: 262px;
+  width: 43px;
+  height: 44px;
+  background-image: url(../../images/animationGroup/ag01/money@2x.png);
+}
+.jia9 {
+  top: 230px;
+  right: 198px;
+  width: 60px;
+  height: 60px;
+  background-image: url(../../images/animationGroup/ag01/Tencent@2x.png);
+}
+.jia10 {
+  top: 190px;
+  left: 93px;
+  width: 66px;
+  height: 66px;
+  background-image: url(../../images/animationGroup/ag01/youku@2x.png);
+}
+.pen {
+  top: 110px;
+  left: 134px;
+  width: 87px;
+  height: 93px;
+  background-image: url(../../images/animationGroup/ag01/pen@2x.png);
+  animation: penAni 4s linear infinite;
+  -webkit-animation: penAni 4s linear infinite;
+}
+.phone {
+  top: 106px;
+  right: 144px;
+  width: 114px;
+  height: 110px;
+  background-image: url(../../images/animationGroup/ag01/phone@2x.png);
+  animation: phoneAni 4s linear infinite;
+  -webkit-animation: phoneAni 4s linear infinite;
+}
+.ia1 {
+  animation: firstA1 5s linear infinite;
+  -webkit-animation: firstA1 5s linear infinite;
+}
+.ia2 {
+  animation: firstA2 5s linear infinite;
+  -webkit-animation: firstA2 5s linear infinite;
+}
+.ia3 {
+  animation: firstA3 5s linear infinite;
+  -webkit-animation: firstA3 5s linear infinite;
+}
+.ia4 {
+  animation: firstA4 5s linear infinite;
+  -webkit-animation: firstA4 5s linear infinite;
+}
+.ia5 {
+  animation: firstA5 5s linear infinite;
+  -webkit-animation: firstA5 5s linear infinite;
+}
+.ia6 {
+  animation: firstA6 5s linear infinite;
+  -webkit-animation: firstA6 5s linear infinite;
+}
+.ia7 {
+  animation: firstA7 5s linear infinite;
+  -webkit-animation: firstA7 5s linear infinite;
+}
+.ia8 {
+  animation: firstA8 5s linear infinite;
+  -webkit-animation: firstA8 5s linear infinite;
+}
+.ia9 {
+  animation: firstA9 5s linear infinite;
+  -webkit-animation: firstA9 5s linear infinite;
+}
+.ia10 {
+  animation: firstA10 5s linear infinite;
+  -webkit-animation: firstA10 5s linear infinite;
+}
+.ia12 {
+  opacity: 0;
+  animation: firstA2 5s linear 2.5s infinite;
+  -webkit-animation: firstA2 5s linear 2.5s infinite;
+}
+.ia13 {
+  opacity: 0;
+  animation: firstA3 5s linear 2.5s infinite;
+  -webkit-animation: firstA3 5s linear 2.5s infinite;
+}
+.ia14 {
+  opacity: 0;
+  animation: firstA4 5s linear 2.5s infinite;
+  -webkit-animation: firstA4 5s linear 2.5s infinite;
+}
+.ia15 {
+  opacity: 0;
+  animation: firstA5 5s linear 2.5s infinite;
+  -webkit-animation: firstA5 5s linear 2.5s infinite;
+}
+.ia16 {
+  opacity: 0;
+  animation: firstA6 5s linear 2.5s infinite;
+  -webkit-animation: firstA6 5s linear 2.5s infinite;
+}
+.ia17 {
+  opacity: 0;
+  animation: firstA7 5s linear 2.5s infinite;
+  -webkit-animation: firstA7 5s linear 2.5s infinite;
+}
+.ia18 {
+  opacity: 0;
+  animation: firstA8 5s linear 2.5s infinite;
+  -webkit-animation: firstA8 5s linear 2.5s infinite;
+}
+@keyframes firstA1
+{
+  0% {top: 170px;}
+  50% {top: 177px;}
+  100% {top: 170px;}
+}
+@-webkit-keyframes firstA1
+{
+  0% {top: 170px;}
+  50% {top: 177px;}
+  100% {top: 170px;}
+}
+@keyframes firstA2
+{
+  0% {top: -200px; opacity: 1;}
+  70% {opacity: 1;}
+  100% {top: 450px; opacity: 0;}
+}
+@-webkit-keyframes firstA2
+{
+  0% {top:-200px; opacity: 1;}
+  70% {opacity: 1;}
+  100% {top: 450px; opacity: 0;}
+}
+
+@keyframes firstA3
+{
+  0% {top: -100; opacity: 1;}
+  70% {opacity: 1;}
+  100% {top: 450px; opacity: 0;}
+}
+@-webkit-keyframes firstA3
+{
+  0% {top: -100; opacity: 1;}
+  70% {opacity: 1;}
+  100% {top: 450px; opacity: 0;}
+}
+/* 4 */
+@keyframes firstA4
+{
+  0% {top: -20; opacity: 1;}
+  70% {opacity: 1;}
+  100% {top: 450px; opacity: 0;}
+}
+@-webkit-keyframes firstA4
+{
+  0% {top: -20; opacity: 1;}
+  70% {opacity: 1;}
+  100% {top: 450px; opacity: 0;}
+}
+/* 5 */
+@keyframes firstA5
+{
+  0% {top: -320px; opacity: 1;}
+  50% {opacity: 1;}
+  100% {top: 400px; opacity: 0;}
+}
+@-webkit-keyframes firstA5
+{
+  0% {top: -320px; opacity: 1;}
+  50% {opacity: 1;}
+  100% {top: 400px; opacity: 0;}
+}
+/* 6 */
+@keyframes firstA6
+{
+  0% {top: -370px; opacity: 1;}
+  50% {opacity: 1;}
+  100% {top: 400px; opacity: 0;}
+}
+@-webkit-keyframes firstA6
+{
+  0% {top: -370px; opacity: 1;}
+  50% {opacity: 1;}
+  100% {top: 400px; opacity: 0;}
+}
+/* 7 */
+@keyframes firstA7
+{
+  0% {top: -5px; opacity: 1;}
+  70% {opacity: 1;}
+  100% {top: 450px; opacity: 0;}
+}
+@-webkit-keyframes firstA7
+{
+  0% {top: -5px; opacity: 1;}
+  70% {opacity: 1;}
+  100% {top: 450px; opacity: 0;}
+}
+/* 8 */
+@keyframes firstA8
+{
+  0% {top: -40px; opacity: 1;}
+  70% {opacity: 1;}
+  100% {top: 450px; opacity: 0;}
+}
+@-webkit-keyframes firstA8
+{
+  0% {top: -40px; opacity: 1;}
+  70% {opacity: 1;}
+  100% {top: 450px; opacity: 0;}
+}
+/* 9 */
+@keyframes firstA9
+{
+  0% {top: 230px;}
+  50% {top: 240px;}
+  100% {top: 230px;}
+}
+@-webkit-keyframes firstA9
+{
+  0% {top: 230px;}
+  50% {top: 240px;}
+  100% {top: 230px;}
+}
+/* 10 */
+@keyframes firstA10
+{
+  0% {top: 190;}
+  50% {top: 200px;}
+  100% {top: 190px;}
+}
+@-webkit-keyframes firstA10
+{
+  0% {top: 190;}
+  50% {top: 200px;}
+  100% {top: 190px;}
+}
+/* pen */
+@keyframes penAni
+{
+  0% {top: 110;}
+  50% {top: 120px;}
+  100% {top: 110px;}
+}
+@-webkit-keyframes penAni
+{
+  0% {top: 110;}
+  50% {top: 120px;}
+  100% {top: 110px;}
+}
+/* phone */
+@keyframes phoneAni
+{
+  0% {top: 106;}
+  50% {top: 116px;}
+  100% {top: 106px;}
+}
+@-webkit-keyframes phoneAni
+{
+  0% {top: 106;}
+  50% {top: 116px;}
+  100% {top: 106px;}
+}
+
+/* 抽奖 */
+.animW2 {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+}
+.draw-main {
+  position: relative;
+  width: 100%;
+  min-height: 550px;
+  padding-top: 34px;
+  background-color: #fff;
+  z-index: 2;
+}
+.draw-close {
+  position: absolute;
+  top: 0;
+  left: calc(50% + 150px);
+  width: 28px;
+  height: 48px;
+  background: url(../../images/animationGroup/ag02/draw_close@2x.png) no-repeat center;
+  background-size: 100%;
+  cursor: pointer;
+  z-index: 10;
+}
+.draw-wrap {
+  /* min-height: 400px; */
+  padding-top: 64px;
+  background: url(../../images/animationGroup/ag02/luckyDraw_bg@2x.png) no-repeat top center;
+  background-size: 420px 322px;
+}
+.game-box {
+  height: 300px;
+}
+.draw-tips {
+  padding: 14px 0 6px;
+  height: 50px;
+}
+.dt-txt {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+  background: url(../../images/animationGroup/ag02/tip@2x.png) no-repeat top center;
+  background-size: 372px 30px;
+}
+.draw-btn {
+  height: 210px;
+  text-align: center;
+  background: url(../../images/animationGroup/ag02/draw_btn@2x.png) no-repeat top center;
+  background-size: 586px 210px;
+}
+.db-b {
+  position: relative;
+  display: inline-block;
+  padding: 0 50px;
+  font-size: 28px;
+  line-height: 48px;
+  font-weight: bold;
+  color: transparent;
+  color: #ffffff\0;
+  letter-spacing: 5px;
+  background-image: linear-gradient(to right, #fff, #FFF2D7);
+  background-image: none\0;
+  background-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  cursor: pointer;
+  border: 0;
+  z-index: 10;
+}
+.draw-handle {
+  position: absolute;
+  top: 178px;
+  left: calc(50% + 165px);
+  width: 100px;
+  height: 140px;
+  background: url(../../images/animationGroup/ag02/draw_handle@2x.png) no-repeat center;
+  background-size: 100%;
+  z-index: -1;
+  transition: all .3s;
+}
+.draw-handle.active {
+  transform: rotateX(180deg);
+  transform-origin: 0 92px;
+}
+
+/* 抽奖主内容区域 */
+.game-box {
+  width: 393px;
+  height: 189px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  font-size: 0;
+  text-align: center;
+  background: url(../../images/animationGroup/ag02/luckyDraw_light.gif) no-repeat center;
+  background-size: 100%;
+  overflow: hidden;
+}
+.game-item {
+	display: inline-block;
+  margin: 0 2px 0 3px;
+  width: 115px;
+	height: 152px;
+  overflow: hidden;
+  vertical-align: top;
+}
+.draw-li {
+	list-style: none;
+	position: relative;
+	width: 100%;
+  padding-top: 94px;
+	height: 152px;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 12px;
+  color: #FEFFDA;
+  text-align: center;
+  background: url(../../images/animationGroup/ag02/redpacket@2x.png) no-repeat center;
+  background-size: 115px 152px;
+}
+.draw-num {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  text-align: center;
+}
+.draw-lh01 {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 608px;
+  height: 311px;
+  background: url(../../images/animationGroup/ag02/lh01@2x.png) no-repeat center;
+  background-size: 100%;
+}
+
+.draw-lh02 {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  width: 867px;
+  height: 545px;
+  margin-left: -433px;
+  transform: scale(0);
+  background: url(../../images/animationGroup/ag02/lh02@2x.png) no-repeat center;
+  background-size: 100%;
+  z-index: -1;
+}
+.draw-lh02.lucky {
+  animation: drawLh02 3s linear infinite;
+  -webkit-animation: drawLh02 3s linear infinite;
+}
+/* 礼花动画 */
+@keyframes drawLh02
+{
+  0% {transform: scale(0)}
+  90% { opacity: 1;}
+  100% {transform: scale(1); opacity: 0;}
+}
+@-webkit-keyframes drawLh02
+{
+  0% {transform: scale(0)}
+  90% {opacity: 1;}
+  100% {transform: scale(1); opacity: 0;}
+}
+
+.ag-hide {
+  display: none !important;
+}
+/* 老虎机 */
+.big {
+  position: relative;
+  margin: 0 auto;
+  width: 675px;
+  height: 675px;
+  background: url(../../images/animationGroup/ag03/wheel.png) no-repeat center;
+}
+.pointer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.turntable {
+  position: absolute;
+  top: 60px;
+  left: 116px;
+  z-index: 5;
+  transition: all 4s;
+}

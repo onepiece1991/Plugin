@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动画效果合集</title>
+  <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/hr/hr.css">
+</head>
+<body>
+  <p class="title">今天吃什么呐？</p>
+      
+  <div class="wheel">
+    <div class="round not_roting">
+      <!-- 转盘图片 -->
+      <img src="../images/hr/bg.png" alt="" class="rotate-bgimg" />
+      <!-- 内容区域 -->
+      <div class="prize" id="prizeBox"></div>
+    </div>
+    <!-- 转转 -->
+    <div class="start-btn">
+      <img src="../images/hr/start@2x.png" alt="" class="start-img" />
+      <button class="rotate-btn" onclick="clickDrawBtn()">转转</button>
+    </div>
+  </div>
+           
+  <script src="../js/jquery.min.js"></script>
+  <!-- <script src="../js/vue.min.js"></script> -->
+  <script src="../js/hr/hr.js"></script>
+</body>
+</html>
