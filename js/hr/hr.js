@@ -46,7 +46,8 @@ function clickDrawBtn() {
   loading = true;
   // 前端生成随机数奖品
   setTimeout(() => {
-    var randomNo = Math.floor(Math.random() * prizeList.length);
+    // var randomNo = Math.floor(Math.random() * prizeList.length);
+    var randomNo = 7;
     var activePrize = prizeList[randomNo];
     // 使用 some 循环，获取到奖品即停止遍历
     prizeList.some((item, index) => {
@@ -70,7 +71,10 @@ function clickDrawBtn() {
             transition: round_time + 'ms',
             transform: 'rotate(' + deg + 'deg)',
           });
-          alert('今天吃' + activePrize.text);
+          // alert('今天吃' + activePrize.text);
+          $('.draw-pop').addClass('active');
+          $('#dpTxt').text(activePrize.text);
+          $('.mask').show();
         }, round_time);
         return true;
       }
@@ -98,4 +102,9 @@ function getRote(index, count) {
   );
   const newDeg = 360 * roundNo - unit * index;
   return newDeg + OFFSET_MULTIPLE * offset;
+}
+
+function hidePop() {
+  $('.draw-pop').removeClass('active');
+  $('.mask').hide();
 }
