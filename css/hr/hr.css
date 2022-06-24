@@ -246,4 +246,5 @@
   left: 0;
   bottom: 0px;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
