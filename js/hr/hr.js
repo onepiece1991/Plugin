@@ -52,7 +52,7 @@ function clickDrawBtn() {
     prizeList.some((item, index) => {
       if (item.id === activePrize.id) {
         // 获取该奖品的一个随机角度，具体见下方函数注释
-        var newDeg = this.getRote(index, prizeList.length);
+        var newDeg = getRote(index, prizeList.length);
         // roting 为 true 时，转盘有旋转动画，时间为 round_time
         roting = true;
         deg = newDeg;

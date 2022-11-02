@@ -19,15 +19,15 @@
   <div class="menu">
     <h3 class="title">动画效果分类</h3>
     <ul class="menu-box">
-      <li class="menu-li active">下雪</li>
-      <li class="menu-li">老虎机</li>
-      <li class="menu-li">大转盘</li>
+      <li class="menu-li active" onclick="changeMenu(this,1)">下雪</li>
+      <li class="menu-li" onclick="changeMenu(this,2)">老虎机</li>
+      <li class="menu-li" onclick="changeMenu(this,3)">大转盘</li>
     </ul>
   </div>
   <div class="content" id="content">
     <div class="c-main">
       <!-- 下雪 -->
-      <div class="anim-widget animW1 hide" id="animWidget01">
+      <div class="anim-widget animW1" id="animWidget01">
         <i class="i-a jia1 ia1"></i>
         <i class="i-a jia2 ia2"></i>
         <i class="i-a jia3 ia3"></i>
@@ -82,18 +82,26 @@
       </div>
 
       <!-- 大转盘 -->
-      <div class="anim-widget animW3" id="animWidget03">
-        <div class="big">
-          <img src="../images/animationGroup/ag03/icon.png" alt="" class="pointer">
-          <!-- <img src="../images/animationGroup/ag03/wheel.png" alt="" class="turntable"> -->
-          <h1>抽奖次数：<span class="number"></span></h1>
+      <div class="anim-widget animW3 ag-hide" id="animWidget03">
+        <div class="wheel">
+          <div class="round not_roting">
+            <!-- 转盘图片 -->
+            <img src="../images/animationGroup/ag03/bg.png" alt="" class="rotate-bgimg" />
+            <!-- 内容区域 -->
+            <div class="prize" id="prizeBox"></div>
+          </div>
+          <!-- 中部开始抽奖 -->
+          <div class="start-btn">
+            <img src="../images/animationGroup/ag03/start@2x.png" alt="" class="start-img" />
+            <button class="rotate-btn" onclick="clickDrawBtn()">开始<br>抽奖</button>
+          </div>
         </div>
       </div>
       
     </div>
   </div>
   <script src="../js/jquery.min.js"></script>
-  <!-- <script src="../js/animationGroup/ag02.js"></script> -->
-  <script src="../js/animationGroup/ag03.js"></script>
+  <script src="../js/vue.min.js"></script>
+  <script src="../js/animationGroup/ag.js"></script>
 </body>
 </html>

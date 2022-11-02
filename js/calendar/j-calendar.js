@@ -545,6 +545,7 @@ function setdateinfo(year,month,day){
     var date1=new Date();
     date1.setFullYear(parseInt(year));
     date1.setMonth(parseInt(month)-parseInt(1), parseInt(day));
+    console.log(date1)
     return date1;
 }
 //得到指定月的上个月最后一天传进来按 12月算

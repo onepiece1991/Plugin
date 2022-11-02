@@ -38,7 +38,8 @@ body {
   border-bottom: 1px solid #ddd;
   cursor: pointer;
 }
-.menu-li:hover {
+.menu-li:hover,
+.menu-li.active {
   color: #fff;
   background-color: #4d91f0;
 }
@@ -48,6 +49,7 @@ body {
 }
 .menu-li:last-child {
   border: 0;
+  border-radius: 0 0 10px 10px;
 }
 /* 主内容 */
 .content {
@@ -68,7 +70,7 @@ body {
   border-radius: 10px;
 }
 .anim-widget.animW1 {
-  background-color: #f00;
+  background-color: rgba(255, 0, 0, .6);
 }
 .i-a {
   position: absolute;
@@ -571,14 +573,17 @@ body {
 .big {
   position: relative;
   margin: 0 auto;
-  width: 675px;
-  height: 675px;
+  width: 300px;
+  height: 300px;
   background: url(../../images/animationGroup/ag03/wheel.png) no-repeat center;
+  background-size: 100%;
 }
 .pointer {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 80px;
+  height: 80px;
   transform: translate(-50%, -50%);
   z-index: 10;
 }
@@ -588,4 +593,159 @@ body {
   left: 116px;
   z-index: 5;
   transition: all 4s;
+}
+
+/* 大转盘 */
+.wheel {
+  position: relative;
+  width: 358px;
+  height: 358px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.wheel:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  height: 340px;
+  background: url(../../images/animationGroup/ag03/light@2x.png) no-repeat;
+  background-size: 100%;
+  z-index: 2;
+}
+.round {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* 抽完奖后复位时，旋转不需要过渡时间 */
+.not_roting { transition: 0s !important; }
+
+.prize {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.item-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.item-box01 {
+  transform: rotate(60deg);
+}
+.item-box02 {
+  transform: rotate(120deg);
+}
+.item-box03 {
+  transform: rotate(180deg);
+}
+.item-box04 {
+  transform: rotate(240deg);
+}
+.item-box05 {
+  transform: rotate(300deg);
+}
+.item-box:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0% 100%;
+  transform: rotate(-30deg) skewY(-30deg);
+  background-color: #fff;
+}
+.item-box01:before {
+  transform: rotate(-30deg) skewY(-30deg);
+  background-color: transparent;
+}
+.item-box02:before {
+  transform: rotate(-30deg) skewY(-30deg);
+  background-color: #fff;
+}
+.item-box03:before {
+  transform: rotate(-30deg) skewY(-30deg);
+  background-color: transparent;
+}
+.item-box04:before {
+  transform: rotate(-30deg) skewY(-30deg);
+  background-color: #fff;
+}
+.item-box05:before {
+  transform: rotate(-30deg) skewY(-30deg);
+  background-color: transparent;
+}
+.prize-item {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.draw-img {
+  display: block;
+  width: 50px;
+  margin-bottom: 10px;
+}
+.draw-txt {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  color: #2E8CFF;
+  text-align: center;
+}
+.draw-txt02 {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: bold;
+}
+.rotate-bgimg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* margin-top: calc(30 / 145 * 100%); */
+}
+
+/* 开始抽奖 居中 */
+.start-btn { 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 97px;
+  height: 108px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.start-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.rotate-btn {
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 97px;
+  height: 97px;
+  font-size: 22px;
+  line-height: 25px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  border: 0;
+  background-color: transparent;
 }
